@@ -11,4 +11,4 @@ Download latest version of stub files in release page:
 
 ## License
 
-The MIT License (MIT). Please see [License File][https://github.com/yeganemehr/whmcs-stub-generator/blob/master/LICENSE] for more information.
+The MIT License (MIT). Please see [License File](https://github.com/yeganemehr/whmcs-stub-generator/blob/master/LICENSE) for more information.
