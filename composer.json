@@ -1,0 +1,22 @@
+{
+	"name": "yeganemehr/whmcs-stub-generator",
+	"license": "MIT",
+	"autoload": {
+		"psr-4": {
+			"Yeganemehr\\WHMCSStubGenerator\\": ["src/"],
+			"Laminas\\Code\\Generator\\": ["laminas-code/"]
+		}
+	},
+	"require": {
+		"php": "^8.1",
+		"laminas/laminas-code": "^4.13",
+		"symfony/finder": "^6.4"
+	},
+	"minimum-stability": "dev",
+	"prefer-stable": true,
+	"require-dev": {
+		"symfony/var-dumper": "^6.4",
+		"friendsofphp/php-cs-fixer": "^3.51"
+	},
+	"bin": ["bin/whmcs-stub-generator"]
+}

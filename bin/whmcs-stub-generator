@@ -1,0 +1,35 @@
+#!/usr/bin/env php
+<?php
+
+use Yeganemehr\WHMCSStubGenerator\Generator;
+
+require_once dirname(__DIR__) . "/vendor/autoload.php";
+
+
+$argv = $_SERVER['argv'];
+if (count($argv) != 3) {
+	echo "Usage:
+  {$argv[0]} <whmcs-path> <output-path>
+
+Arguments:
+  whmcs-path            path to your whmcs installtion
+  output-path           Where you want stub files create?
+";
+	exit(2);
+}
+$whmcsPath = $argv[1];
+$outputPath = $argv[2];
+
+if (!is_dir($whmcsPath)) {
+	echo ("\"{$whmcsPath}\" as whmcs path is not directory.\n");
+	exit(2);
+}
+if (!is_dir($outputPath)) {
+	echo ("\"{$outputPath}\" as output path is not directory.\n");
+	exit(2);
+}
+
+$generator = new Generator($whmcsPath, $outputPath);
+$generator->generate();
+
+echo "done\n";
